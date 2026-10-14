@@ -57,15 +57,10 @@ footer button:hover{color:#ff6b76}
 .body p,.body li{margin-bottom:8px;color:#bdbdc4}
 .body ul{padding-left:20px}
 .todo{color:#ff8a93}
-#consent{position:fixed;left:12px;right:12px;bottom:12px;max-width:560px;margin:0 auto;background:#141416;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.82rem;color:var(--soft);display:none;z-index:40}
-#consent.show{display:block}
-#consent .row{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-#consent button{font:inherit;font-weight:600;padding:8px 16px;border-radius:8px;cursor:pointer;border:1px solid var(--line);background:transparent;color:#fff}
-#consent button.ok{background:var(--red);border-color:var(--red)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 
-<!-- Meta Pixel Code: loads in a consent-denied state; tracking is granted only after the visitor accepts -->
+<!-- Meta Pixel Code: runs on page load -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -75,7 +70,6 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('consent','revoke');
 fbq('init', '2564341003991541');
 fbq('track', 'PageView');
 </script>
@@ -87,7 +81,7 @@ fbq('track', 'PageView');
 <header>
   <div class="wrap">
     <!-- TODO: replace with the exact Telegram link for the GM ad contact -->
-    <a class="gm" id="gmLink" href="https://t.me/+k_VNIlPEvio4ZjY1" target="_blank" rel="noopener noreferrer">Ads Managed by GM</a>
+    <a class="gm" id="gmLink" href="https://t.me/REPLACE_GM_LINK" target="_blank" rel="noopener noreferrer">Ads Managed by GM</a>
   </div>
 </header>
 
@@ -96,8 +90,7 @@ fbq('track', 'PageView');
     <div class="wrap">
       <h1>TEAM SOUTH</h1>
       <p class="sub">Join our stock market community to explore market insights, educational resources, and trading-related discussions.</p>
-      <!-- TODO: replace with the exact Telegram community link -->
-      <a class="btn tg-link" id="ctaMain" href="https://t.me/+kyZ9uZfyM7dlMDNl" target="_blank" rel="noopener noreferrer">
+            <a class="btn tg-link" id="ctaMain" href="https://t.me/+kyZ9uZfyM7dlMDNl" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.5c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13 1.8 11.5c-1-.3-1-1 .2-1.5L20.3 3c.9-.3 1.600.2 1.600 1.300z"/></svg>
         JOIN OUR FREE COMMUNITY
       </a>
@@ -138,39 +131,10 @@ fbq('track', 'PageView');
 
 <footer>
   <div class="wrap">
-    <button type="button" data-modal="privacy">Privacy Policy</button>
     <button type="button" data-modal="disclaimer">Disclaimer</button>
     <button type="button" data-modal="terms">Terms of Service</button>
   </div>
 </footer>
-
-<!-- Privacy -->
-<div class="modal" id="m-privacy" role="dialog" aria-modal="true" aria-labelledby="t-privacy">
-  <div class="panel">
-    <h2 id="t-privacy">Privacy Policy</h2>
-    <button class="close" type="button" aria-label="Close">&times;</button>
-    <div class="body">
-      <p>Last updated: 15 October 2026. This policy explains how TEAM SOUTH ("we", "us") handles information when you visit this website. Operator name and registered address: <span class="todo">[to be supplied by the site owner]</span>.</p>
-      <h3>1. Information we collect</h3>
-      <ul>
-        <li><b>Automatically collected:</b> when you visit, technical data such as IP address, browser and device type, referring page, pages viewed and approximate location may be collected by our hosting provider and by the analytics service described below.</li>
-        <li><b>Voluntarily submitted:</b> this website has no forms. If you contact us directly, we receive whatever you choose to send.</li>
-      </ul>
-      <h3>2. Analytics and click tracking</h3>
-      <p>We use the Meta Pixel (Meta Platforms, Inc.) to measure visits and to count clicks on the "Join" buttons and the "Ads Managed by GM" link. A click is recorded only when a visitor actually clicks. A button click is not proof that someone joined Telegram, and we do not receive confirmation of who joins. The Meta Pixel loads in a consent-denied state and only starts collecting after you accept in the consent notice.</p>
-      <h3>3. Cookies and similar technologies</h3>
-      <p>The Meta Pixel may set cookies or use similar identifiers once you consent. We store your consent choice in your browser's local storage. You can clear cookies and site data in your browser settings at any time.</p>
-      <h3>4. Data processing, storage, retention and security</h3>
-      <p>Analytics data is processed by Meta under its own policies. We do not control Meta's retention periods. We use HTTPS and keep any credentials on the server side. No method of transmission or storage is completely secure. Retention period for any data we hold directly: <span class="todo">[to be supplied by the site owner]</span>.</p>
-      <h3>5. Third-party services</h3>
-      <p>Clicking a Join button opens Telegram, which is operated by a third party under its own terms and privacy policy. Once you leave this site, we do not control what Telegram collects. Fonts are loaded from Google Fonts, which may receive your IP address.</p>
-      <h3>6. Is personal information shared?</h3>
-      <p>We do not sell personal information. Data is shared only with the service providers named above (Meta, Google Fonts, our hosting provider) to operate and measure the website, or where required by law.</p>
-      <h3>7. Your rights</h3>
-      <p>Subject to applicable law, including India's Digital Personal Data Protection Act, 2023, you may request access, correction or erasure of your personal data, and withdraw consent at any time (clear your browser storage to see the consent notice again). Contact for privacy requests: <span class="todo">[email address to be supplied by the site owner]</span>.</p>
-    </div>
-  </div>
-</div>
 
 <!-- Disclaimer -->
 <div class="modal" id="m-disclaimer" role="dialog" aria-modal="true" aria-labelledby="t-disclaimer">
@@ -223,14 +187,6 @@ fbq('track', 'PageView');
   </div>
 </div>
 
-<div id="consent" role="region" aria-label="Cookie consent">
-  We use the Meta Pixel to measure visits and button clicks. It only collects data if you accept. See the Privacy Policy for details.
-  <div class="row">
-    <button type="button" class="ok" id="accept">Accept</button>
-    <button type="button" id="decline">Decline</button>
-  </div>
-</div>
-
 <script>
 (function(){
   // ---- Legal modals ----
@@ -255,23 +211,10 @@ fbq('track', 'PageView');
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModals()});
 
-  // ---- Consent ----
-  var KEY='ts_consent',box=document.getElementById('consent'),saved=null;
-  try{saved=localStorage.getItem(KEY)}catch(e){}
-  if(saved==='granted'){try{fbq('consent','grant')}catch(e){}}
-  else if(saved!=='denied'){box.classList.add('show')}
-  function choose(v){
-    try{localStorage.setItem(KEY,v)}catch(e){}
-    if(v==='granted'){try{fbq('consent','grant')}catch(e){}}
-    box.classList.remove('show');
-  }
-  document.getElementById('accept').addEventListener('click',function(){choose('granted')});
-  document.getElementById('decline').addEventListener('click',function(){choose('denied')});
-
   // ---- Genuine click tracking (real user clicks only; never blocks navigation) ----
   function track(name,e){
     if(!e.isTrusted)return; // ignore scripted/synthetic clicks
-    try{fbq('subscribe',name)}catch(err){}
+    try{fbq('trackCustom',name)}catch(err){}
   }
   var map={ctaMain:'CTA_Click_Primary',ctaSecondary:'CTA_Click_Secondary',gmLink:'GM_Link_Click'};
   Object.keys(map).forEach(function(id){
